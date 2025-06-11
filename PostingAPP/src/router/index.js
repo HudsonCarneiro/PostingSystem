@@ -7,7 +7,12 @@ import HomeView from '../views/HomeView.vue'
 const routes = [
   { path: '/login', component: LoginView },
   { path: '/register', component: RegisterView },
-  { path: '/', component: PostsView }, // pagina principal apos login
+  { path: '/', component: PostsView }, 
+  { path: '/reset-password/:token',
+    name: 'ResetPassword',
+    component: () => import('@/views/ResetPasswordView.vue')
+  }
+
 
 ]
 
